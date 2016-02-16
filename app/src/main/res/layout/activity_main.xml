@@ -14,28 +14,58 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/account_brief"
-            android:id="@+id/account_brief"
-            android:gravity="center"
-            android:textSize="18dp"
-            android:textColor="@color/grey"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="90dp"
-            android:layout_gravity="center_horizontal" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="$7,456.78"
-            android:id="@+id/textView"
-            android:textSize="45dp"
-            android:textColor="@color/grey"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:layout_gravity="center_horizontal" />
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/glass"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_brief"
+                android:id="@+id/account_brief"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:textColor="@color/grey"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:layout_gravity="center_horizontal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$7,456.78"
+                android:id="@+id/textView"
+                android:textSize="45dp"
+                android:textColor="@color/grey"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="115dp"
+                android:layout_gravity="center_horizontal" />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/new_btn"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/grey"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:textSize="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
     </LinearLayout>
 
 </RelativeLayout>
