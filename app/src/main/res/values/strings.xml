@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dank Bank</string>
+
+    <string name="account_brief">Your Account Balance is</string>
 </resources>
