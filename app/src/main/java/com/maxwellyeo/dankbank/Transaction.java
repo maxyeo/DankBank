@@ -74,7 +74,7 @@ public class Transaction extends Activity {
      */
     protected String toLog(Float balance) {
         String dollar = toDollar(balance);
-        String log = "Added " + dollar;
+        String log = "Increased transaction amount by " + dollar;
         return log;
     }
 

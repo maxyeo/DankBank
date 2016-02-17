@@ -15,4 +15,6 @@
 
     <color name="translucent_red">#80ff0000</color>
     <color name="yellow">#ffec3d</color>
+    <color name="green">#0d9727</color>
+
 </resources>
