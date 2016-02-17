@@ -11,6 +11,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.TextClock;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.Stack;
 
@@ -84,5 +88,32 @@ public class Transaction extends Activity {
         return "$" + dollar;
     }
 
+
+    protected String toLog(Float balance) {
+        String dollar = toDollar(balance);
+        String log = "Added " + dollar;
+        return log;
+    }
+
+    public void add1dollar(View view) {
+        trans += 1;
+        msg.setText(toDollar(trans));
+        log_status.setText(toLog(trans));
+    }
+    public void add5dollar(View view) {
+        trans += 5;
+        msg.setText(toDollar(trans));
+        log_status.setText(toLog(trans));
+    }
+    public void add10dollar(View view) {
+        trans += 10;
+        msg.setText(toDollar(trans));
+        log_status.setText(toLog(trans));
+    }
+    public void add20dollar(View view) {
+        trans += 20;
+        msg.setText(toDollar(trans));
+        log_status.setText(toLog(trans));
+    }
 }
 

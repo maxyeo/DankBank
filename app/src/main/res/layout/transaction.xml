@@ -109,7 +109,8 @@
                 android:text="@string/dollar_1"
                 android:background="@color/cash_green"
                 android:textColor="@color/grey"
-                android:id="@+id/dollar_1"/>
+                android:id="@+id/dollar_1"
+                android:onClick="add1dollar"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -120,7 +121,8 @@
                 android:text="@string/dollar_5"
                 android:background="@color/cash_green"
                 android:textColor="@color/grey"
-                android:id="@+id/dollar_5"/>
+                android:id="@+id/dollar_5"
+                android:onClick="add5dollar"/>
         </LinearLayout>
 
         <!--10/20 Dollar Bills-->
@@ -140,7 +142,8 @@
                 android:text="@string/dollar_10"
                 android:background="@color/cash_green"
                 android:textColor="@color/grey"
-                android:id="@+id/dollar_10" />
+                android:id="@+id/dollar_10"
+                android:onClick="add10dollar"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -151,7 +154,8 @@
                 android:text="@string/dollar_20"
                 android:background="@color/cash_green"
                 android:textColor="@color/grey"
-                android:id="@+id/dollar_20"/>
+                android:id="@+id/dollar_20"
+                android:onClick="add20dollar"/>
         </LinearLayout>
     </LinearLayout>
 
