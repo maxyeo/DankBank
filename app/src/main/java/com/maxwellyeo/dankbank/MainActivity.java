@@ -34,7 +34,7 @@ public class MainActivity extends Activity {
 
         balance = myPrefs.getFloat("hitsValue", 0);
         balance_field = (TextView) findViewById(R.id.balance_field);
-        balance_field.setText(balance.toString());
+        balance_field.setText(toDollar(balance));
     }
 
     @Override
@@ -62,14 +62,12 @@ public class MainActivity extends Activity {
         super.onStop();
     }
 
-    /** Called when the user clicks the HITME button */
-    public void transaction(View view) {
-        // Do something in response to button
-        
-        SharedPreferences.Editor peditor = myPrefs.edit();
-        peditor.putFloat("balance", balance);
-        peditor.commit();
+    protected String toDollar(Float balance) {
+        String dollar = String.format("%.2f", balance);
+        return "$" + dollar;
+    }
 
+    public void newTrans(View view) {
         Intent intent = new Intent(MainActivity.this, Transaction.class);
         startActivity(intent);
     }
