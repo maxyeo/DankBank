@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Trans Amount"
+            android:text="$0.00"
             android:id="@+id/trans_amount"
             android:layout_marginBottom="50dp"
             android:layout_marginTop="50dp"
@@ -57,7 +57,8 @@
                 android:text="@string/cent"
                 android:id="@+id/penny"
                 android:background = "@drawable/pennybutton"
-                android:textSize="25sp"/>
+                android:textSize="25sp"
+                android:onClick="addCent"/>
             <Button
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -66,7 +67,8 @@
                 android:text="@string/nickel"
                 android:id="@+id/nickel"
                 android:background = "@drawable/roundedbutton"
-                android:textSize="25sp"/>
+                android:textSize="25sp"
+                android:onClick="addNickel"/>
             <Button
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -76,7 +78,7 @@
                 android:id="@+id/dime"
                 android:background = "@drawable/roundedbutton"
                 android:textSize="25sp"
-                />
+                android:onClick="addDime"/>
             <Button
                 android:layout_width="70dp"
                 android:layout_height="70dp"
@@ -86,7 +88,7 @@
                 android:id="@+id/quarter"
                 android:background = "@drawable/roundedbutton"
                 android:textSize="25sp"
-                />
+                android:onClick="addQuarter"/>
         </LinearLayout>
 
 
