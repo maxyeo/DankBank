@@ -57,59 +57,70 @@ public class Transaction extends Activity {
         peditor.commit();
     }
 
-    public void addCent(View view) {
-        /*TextView trans_amount = (TextView) findViewById(R.id.trans_amount);
-        Button cent = (Button) findViewById(R.id.penny);
-        String trans_string = trans_amount.getText().toString().substring(1, trans_amount.getText().toString().lastIndexOf(""));
-        Double trans_double = Double.parseDouble(trans_string);
-        trans_double = trans_double + 0.01;
-        trans_amount.setText("$" + trans_double.toString());*/
-        trans += (float) 0.01;
-        msg.setText(toDollar(trans));
-    }
-
-    public void addNickel(View view) {
-        trans += (float) 0.05;
-        msg.setText(toDollar(trans));
-    }
-
-    public void addDime(View view) {
-        trans += (float) 0.10;
-        msg.setText(toDollar(trans));
-    }
-
-    public void addQuarter(View view) {
-        trans += (float) 0.25;
-        msg.setText(toDollar(trans));
-    }
-
+    /**
+     * Turns a float into the Dollar format.
+     * @param balance input float
+     * @return String in dollar format
+     */
     protected String toDollar(Float balance) {
         String dollar = String.format("%.2f", balance);
         return "$" + dollar;
     }
 
-
+    /**
+     * Turns a float into a log status message.
+     * @param balance input float
+     * @return String in log status message.
+     */
     protected String toLog(Float balance) {
         String dollar = toDollar(balance);
         String log = "Added " + dollar;
         return log;
     }
 
+    /* 1 Cent Button Event */
+    public void addCent(View view) {
+        trans += 0.01f;
+        msg.setText(toDollar(trans));
+        log_status.setText(toLog(0.01f));
+    }
+    /* 5 Cent Button Event */
+    public void addNickel(View view) {
+        trans += 0.05f;
+        msg.setText(toDollar(trans));
+        log_status.setText(toLog(0.05f));
+    }
+    /* 10 Cent Button Event */
+    public void addDime(View view) {
+        trans += 0.10f;
+        msg.setText(toDollar(trans));
+        log_status.setText(toLog(0.10f));
+    }
+    /* 20 Cent Button Event */
+    public void addQuarter(View view) {
+        trans += 0.25f;
+        msg.setText(toDollar(trans));
+        log_status.setText(toLog(0.25f));
+    }
+    /* 1 Dollar Button Event */
     public void add1dollar(View view) {
         trans += 1.0f;
         msg.setText(toDollar(trans));
         log_status.setText(toLog(1.0f));
     }
+    /* 5 Dollar Button Event */
     public void add5dollar(View view) {
         trans += 5.0f;
         msg.setText(toDollar(trans));
         log_status.setText(toLog(5.0f));
     }
+    /* 10 Dollar Button Event */
     public void add10dollar(View view) {
         trans += 10.0f;
         msg.setText(toDollar(trans));
         log_status.setText(toLog(10.0f));
     }
+    /* 20 Dollar Button Event */
     public void add20dollar(View view) {
         trans += 20.0f;
         msg.setText(toDollar(trans));
