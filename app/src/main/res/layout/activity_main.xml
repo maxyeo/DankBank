@@ -64,7 +64,8 @@
                 android:paddingBottom="16dp"
                 android:textSize="18dp"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                android:onClick="newTrans"/>
         </RelativeLayout>
     </LinearLayout>
 
