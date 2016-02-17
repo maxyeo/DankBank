@@ -67,24 +67,24 @@ public class Transaction extends Activity {
     }
 
     public void add1dollar(View view) {
-        trans += 1;
+        trans += 1.0f;
         msg.setText(toDollar(trans));
-        log_status.setText(toLog(trans));
+        log_status.setText(toLog(1.0f));
     }
     public void add5dollar(View view) {
-        trans += 5;
+        trans += 5.0f;
         msg.setText(toDollar(trans));
-        log_status.setText(toLog(trans));
+        log_status.setText(toLog(5.0f));
     }
     public void add10dollar(View view) {
-        trans += 10;
+        trans += 10.0f;
         msg.setText(toDollar(trans));
-        log_status.setText(toLog(trans));
+        log_status.setText(toLog(10.0f));
     }
     public void add20dollar(View view) {
-        trans += 20;
+        trans += 20.0f;
         msg.setText(toDollar(trans));
-        log_status.setText(toLog(trans));
+        log_status.setText(toLog(20.0f));
     }
 }
 
