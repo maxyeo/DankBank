@@ -18,9 +18,6 @@ public class Transaction extends Activity {
         setContentView(R.layout.transaction);
 
 
-        ActionBar ab = getActionBar();
-
-
     }
 
 

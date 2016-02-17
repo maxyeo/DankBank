@@ -9,9 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.NoTitleBar">
-            >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,8 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Transaction"
-            android:label="@string/new_trans"
-            android:theme="@android:style/Theme.NoTitleBar">
+            android:label="@string/new_trans">
             >
         </activity>
     </application>
