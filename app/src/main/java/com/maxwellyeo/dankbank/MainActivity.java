@@ -35,6 +35,7 @@ public class MainActivity extends Activity {
         balance = myPrefs.getFloat("hitsValue", 0);
         balance_field = (TextView) findViewById(R.id.balance_field);
         balance_field.setText(toDollar(balance));
+        balance_field.getText();
     }
 
     @Override
