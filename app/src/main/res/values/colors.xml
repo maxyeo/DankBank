@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#674b94</color>
+    <color name="colorSecondary">#7959ae</color>
     <color name="colorPrimaryDark">#483467</color>
     <color name="colorAccent">#FF4081</color>
 
@@ -9,6 +10,6 @@
     <color name="black">#000000</color>
     <color name="penny_coin">#DF7401</color>
     <color name="silver_coin">#D8D8D8</color>
-    <color name="cash_green">#ade9b9</color>
+    <color name="cash_green">#07681a</color>
 
 </resources>
