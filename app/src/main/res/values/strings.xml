@@ -4,4 +4,9 @@
     <string name="account_brief">Your Account Balance is</string>
     <string name="new_btn">New Transaction</string>
     <string name="new_trans">New Transaction</string>
+
+    <string name="cent">1¢</string>
+    <string name="nickel">5¢</string>
+    <string name="dime">10¢</string>
+    <string name="quarter">25¢</string>
 </resources>
