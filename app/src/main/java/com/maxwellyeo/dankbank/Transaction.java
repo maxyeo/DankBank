@@ -9,6 +9,8 @@ import android.app.ActionBar;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.TextClock;
 import android.widget.TextView;
 
@@ -55,10 +57,37 @@ public class Transaction extends Activity {
         peditor.commit();
     }
 
+    public void addCent(View view) {
+        /*TextView trans_amount = (TextView) findViewById(R.id.trans_amount);
+        Button cent = (Button) findViewById(R.id.penny);
+        String trans_string = trans_amount.getText().toString().substring(1, trans_amount.getText().toString().lastIndexOf(""));
+        Double trans_double = Double.parseDouble(trans_string);
+        trans_double = trans_double + 0.01;
+        trans_amount.setText("$" + trans_double.toString());*/
+        trans += (float) 0.01;
+        msg.setText(toDollar(trans));
+    }
+
+    public void addNickel(View view) {
+        trans += (float) 0.05;
+        msg.setText(toDollar(trans));
+    }
+
+    public void addDime(View view) {
+        trans += (float) 0.10;
+        msg.setText(toDollar(trans));
+    }
+
+    public void addQuarter(View view) {
+        trans += (float) 0.25;
+        msg.setText(toDollar(trans));
+    }
+
     protected String toDollar(Float balance) {
         String dollar = String.format("%.2f", balance);
         return "$" + dollar;
     }
+
 
     protected String toLog(Float balance) {
         String dollar = toDollar(balance);
