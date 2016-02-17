@@ -10,18 +10,24 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Medium Text"
-            android:id="@+id/textView3" />
+            android:layout_weight="5000"
+            android:id="@+id/log" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="UNDO"
+            android:textColor="@color/yellow"
             android:id="@+id/button5"
+            android:layout_weight="1"
+            android:background="@null"
+            android:textSize="18sp"
             android:layout_gravity="right" />
     </LinearLayout>
 
@@ -29,10 +35,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:id="@+id/textView2"
+        android:text="Trans Amount"
+        android:id="@+id/trans_amount"
         android:layout_marginBottom="50dp"
         android:layout_marginTop="50dp"
+        android:textColor="@color/grey"
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout

@@ -3,12 +3,12 @@
     <color name="colorPrimary">#674b94</color>
     <color name="colorPrimaryDark">#483467</color>
     <color name="colorAccent">#FF4081</color>
-
     <color name="grey">#EEEEEE</color>
     <color name="glass">#13c6c6c6</color>
     <color name="black">#000000</color>
     <color name="penny_coin">#DF7401</color>
     <color name="silver_coin">#D8D8D8</color>
     <color name="cash_green">#ade9b9</color>
-
+    <color name="translucent_red">#80ff0000</color>
+    <color name="yellow">#ffec3d</color>
 </resources>
