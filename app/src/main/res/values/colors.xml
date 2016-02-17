@@ -9,5 +9,6 @@
     <color name="black">#000000</color>
     <color name="penny_coin">#DF7401</color>
     <color name="silver_coin">#D8D8D8</color>
+    <color name="cash_green">#ade9b9</color>
 
 </resources>
