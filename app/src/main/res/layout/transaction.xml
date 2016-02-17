@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context="com.maxwellyeo.dankbank.Transaction">
 
     <TextView
@@ -19,21 +20,18 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal">
-
         <Button
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="Penny"
             android:id="@+id/penny"
             android:background = "@drawable/roundedbutton"/>
-
         <Button
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:text="Nickel"
             android:id="@+id/nickel"
             android:background = "@drawable/roundedbutton"/>
-
         <Button
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -41,7 +39,6 @@
             android:id="@+id/dime"
             android:background = "@drawable/roundedbutton"
             />
-
         <Button
             android:layout_width="50dp"
             android:layout_height="wrap_content"
@@ -55,43 +52,86 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
         <Button
-            style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button" />
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/dollar_1"
+            android:background="@color/cash_green"
+            android:id="@+id/dollar_1" />
 
         <Button
-            style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button2" />
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/dollar_5"
+            android:background="@color/cash_green"
+            android:id="@+id/dollar_5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/dollar_10"
+            android:background="@color/cash_green"
+            android:id="@+id/dollar_10" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/dollar_20"
+            android:background="@color/cash_green"
+            android:id="@+id/dollar_20"/>
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button3"
-            android:layout_gravity="center_horizontal" />
-
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/withdraw"
+            android:background="@color/cash_green"
+            android:id="@+id/withdraw" />
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button4"
-            android:layout_gravity="right" />
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="@string/deposit"
+            android:background="@color/cash_green"
+            android:id="@+id/deposit"/>
     </LinearLayout>
 
 </LinearLayout>
