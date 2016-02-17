@@ -3,4 +3,5 @@
 
     <string name="account_brief">Your Account Balance is</string>
     <string name="new_btn">New Transaction</string>
+    <string name="new_trans">New Transaction</string>
 </resources>

@@ -70,7 +70,7 @@ public class MainActivity extends Activity {
         peditor.putFloat("balance", balance);
         peditor.commit();
 
-        Intent intent = new Intent(MainActivity.this, transaction.class);
+        Intent intent = new Intent(MainActivity.this, Transaction.class);
         startActivity(intent);
     }
 
