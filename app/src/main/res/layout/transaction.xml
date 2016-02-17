@@ -63,8 +63,7 @@
             android:layout_weight="1"
             android:text="@string/dollar_1"
             android:background="@color/cash_green"
-            android:id="@+id/dollar_1" />
-
+            android:id="@+id/dollar_1"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,16 +73,15 @@
             android:layout_weight="1"
             android:text="@string/dollar_5"
             android:background="@color/cash_green"
-            android:id="@+id/dollar_5" />
+            android:id="@+id/dollar_5"/>
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp">
+        android:paddingRight="10dp">
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,9 +107,10 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
         <Button
-            style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
@@ -120,9 +119,8 @@
             android:layout_weight="1"
             android:text="@string/withdraw"
             android:background="@color/cash_green"
-            android:id="@+id/withdraw" />
+            android:id="@+id/withdraw"/>
         <Button
-            style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingTop="10dp"
