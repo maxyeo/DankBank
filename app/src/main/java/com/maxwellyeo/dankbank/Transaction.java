@@ -32,6 +32,8 @@ public class Transaction extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.transaction);
 
+        System.out.println("trans: create");
+
         Context context = getApplicationContext();  // app level storage
         myPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         balance = myPrefs.getFloat("balance", 0);
@@ -44,6 +46,7 @@ public class Transaction extends Activity {
     protected void onStart() {
         super.onStart();
 
+        System.out.println("trans: start");
         trans = (float) 0;
         stack = new Stack<Float>();
     }
@@ -52,9 +55,48 @@ public class Transaction extends Activity {
     protected void onPause() {
         super.onPause();
 
+        System.out.println("trans: pause");
         SharedPreferences.Editor peditor = myPrefs.edit();
         peditor.putFloat("balance", balance);
         peditor.commit();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        System.out.println("trans: stop");
+        SharedPreferences.Editor peditor = myPrefs.edit();
+        peditor.putFloat("balance", balance);
+        peditor.commit();
+    }
+
+    public void deposit (View view) {
+        System.out.println("trans: deposit");
+        balance += trans;
+
+        SharedPreferences.Editor peditor = myPrefs.edit();
+        peditor.putFloat("balance", balance);
+        peditor.commit();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void withdraw (View view) {
+        System.out.println("trans: withdraw");
+        if (trans > balance) {
+            log_status.setText(R.string.over_withdrawal);
+        } else {
+            balance -= trans;
+
+            SharedPreferences.Editor peditor = myPrefs.edit();
+            peditor.putFloat("balance", balance);
+            peditor.commit();
+
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 
     /**
@@ -161,4 +203,3 @@ public class Transaction extends Activity {
         }
     }
 }
-

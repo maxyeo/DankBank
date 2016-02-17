@@ -12,55 +12,52 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private SharedPreferences myPrefs;
-    private Float balance;
-    private TextView balance_field;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        System.out.println("main: create");
+
         Context context = getApplicationContext();
         myPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
-        SharedPreferences.Editor peditor = myPrefs.edit();
-        peditor.putFloat("balance", 0);
-        peditor.commit();
+        Float balance = myPrefs.getFloat("balance", 0);
+        TextView balance_field = (TextView) findViewById(R.id.balance_field);
+        balance_field.setText(toDollar(balance));
     }
 
     @Override
     protected void onStart() {
         super.onStart();
 
-        balance = myPrefs.getFloat("hitsValue", 0);
-        balance_field = (TextView) findViewById(R.id.balance_field);
+        System.out.println("main: start");
+        Float balance = myPrefs.getFloat("balance", 0);
+        TextView balance_field = (TextView) findViewById(R.id.balance_field);
         balance_field.setText(toDollar(balance));
-        balance_field.getText();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+
+        System.out.println("main: resume");
+        Float balance = myPrefs.getFloat("balance", 0);
+        TextView balance_field = (TextView) findViewById(R.id.balance_field);
+        balance_field.setText(toDollar(balance));
     }
 
     @Override
     protected void onPause() {
-
-        SharedPreferences.Editor peditor = myPrefs.edit();
-        peditor.putFloat("balance", balance);
-        peditor.commit();
-
         super.onPause();
+        System.out.println("main: pause");
     }
 
     @Override
     protected void onStop() {
-
-        SharedPreferences.Editor peditor = myPrefs.edit();
-        peditor.putFloat("balance", balance);
-        peditor.commit();
-
         super.onStop();
+        System.out.println("main: stop");
     }
 
     protected String toDollar(Float balance) {

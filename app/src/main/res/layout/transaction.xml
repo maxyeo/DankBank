@@ -181,7 +181,8 @@
             android:text="@string/withdraw"
             android:background="@color/colorPrimary"
             android:textColor="@color/grey"
-            android:id="@+id/withdraw"/>
+            android:id="@+id/withdraw"
+            android:onClick="withdraw"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -191,6 +192,7 @@
             android:text="@string/deposit"
             android:background="@color/colorSecondary"
             android:textColor="@color/grey"
-            android:id="@+id/deposit"/>
+            android:id="@+id/deposit"
+            android:onClick="deposit"/>
     </LinearLayout>
 </RelativeLayout>

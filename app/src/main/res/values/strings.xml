@@ -7,6 +7,7 @@
 
     <string name="undo">UNDO</string>
     <string name="first_move">You just undid your first move</string>
+    <string name="over_withdrawal">You don\'t have enough cash</string>
 
     <string name="cent">1¢</string>
     <string name="nickel">5¢</string>
