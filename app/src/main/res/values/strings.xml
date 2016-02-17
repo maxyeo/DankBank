@@ -4,13 +4,16 @@
     <string name="account_brief">Your Account Balance is</string>
     <string name="new_btn">New Transaction</string>
     <string name="new_trans">New Transaction</string>
-
+    <string name="cent">1¢</string>
+    <string name="nickel">5¢</string>
+    <string name="dime">10¢</string>
+    <string name="quarter">25¢</string>
     <string name="dollar_1">$1</string>
     <string name="dollar_5">$5</string>
     <string name="dollar_10">$10</string>
     <string name="dollar_20">$20</string>
-
     <string name="withdraw">Withdraw</string>
     <string name="deposit">Deposit</string>
+
 
 </resources>
