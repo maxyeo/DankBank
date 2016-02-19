@@ -60,9 +60,8 @@
                 android:layout_height="70dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/cent"
                 android:id="@+id/penny"
-                android:background = "@drawable/pennybutton"
+                android:background="@drawable/coin_1"
                 android:textSize="25sp"
                 android:onClick="addCent"/>
             <Button
@@ -70,9 +69,8 @@
                 android:layout_height="70dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/nickel"
                 android:id="@+id/nickel"
-                android:background = "@drawable/roundedbutton"
+                android:background="@drawable/coin_5"
                 android:textSize="25sp"
                 android:onClick="addNickel"/>
             <Button
@@ -80,9 +78,8 @@
                 android:layout_height="70dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/dime"
                 android:id="@+id/dime"
-                android:background = "@drawable/roundedbutton"
+                android:background="@drawable/coin_10"
                 android:textSize="25sp"
                 android:onClick="addDime"/>
             <Button
@@ -90,9 +87,8 @@
                 android:layout_height="70dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/quarter"
                 android:id="@+id/quarter"
-                android:background = "@drawable/roundedbutton"
+                android:background="@drawable/coin_25"
                 android:textSize="25sp"
                 android:onClick="addQuarter"/>
         </LinearLayout>
@@ -105,27 +101,25 @@
             android:layout_height="wrap_content"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/dollar_1"
-                android:background="@color/cash_green"
+                android:background="@drawable/bill_1"
                 android:textColor="@color/grey"
                 android:id="@+id/dollar_1"
                 android:onClick="add1dollar"/>
-            <Button
+            <ImageButton
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/dollar_5"
-                android:background="@color/cash_green"
+                android:background="@drawable/bill_5"
                 android:textColor="@color/grey"
                 android:id="@+id/dollar_5"
                 android:onClick="add5dollar"/>
@@ -140,25 +134,23 @@
             android:paddingRight="10dp">
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/dollar_10"
-                android:background="@color/cash_green"
+                android:background="@drawable/bill_10"
                 android:textColor="@color/grey"
                 android:id="@+id/dollar_10"
                 android:onClick="add10dollar"/>
             <Button
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="70dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/dollar_20"
-                android:background="@color/cash_green"
+                android:background="@drawable/bill_20"
                 android:textColor="@color/grey"
                 android:id="@+id/dollar_20"
                 android:onClick="add20dollar"/>
