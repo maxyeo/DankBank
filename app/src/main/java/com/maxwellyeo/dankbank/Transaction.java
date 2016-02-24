@@ -1,7 +1,9 @@
 package com.maxwellyeo.dankbank;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -74,6 +76,18 @@ public class Transaction extends Activity {
     }
 
     public void deposit (View view) {
+        new AlertDialog.Builder(this)
+            .setTitle(R.string.deposit_dialogue)
+            .setMessage("Do you really want to deposit " + toDollar(trans) + "?")
+            .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                public void onClick(DialogInterface dialog, int whichButton) {
+                    depositH();
+                }})
+            .setNegativeButton(android.R.string.no, null).show();
+    }
+
+    protected void depositH() {
         System.out.println("trans: deposit");
         balance += trans;
 
@@ -96,21 +110,33 @@ public class Transaction extends Activity {
         if (trans > balance) {
             log_status.setText(R.string.over_withdrawal);
         } else {
-            balance -= trans;
+            new AlertDialog.Builder(this)
+                .setTitle(R.string.withdraw_dialogue)
+                .setMessage("Do you really want to withdraw "  + toDollar(trans) + "?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
-            SharedPreferences.Editor peditor = myPrefs.edit();
-            peditor.putFloat("balance", balance);
-            peditor.commit();
-
-            Context context = getApplicationContext();
-            CharSequence text = "Withdrew " + toDollar(trans);
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+                    public void onClick(DialogInterface dialog, int whichButton) {
+                        withdrawH();
+                    }})
+                .setNegativeButton(android.R.string.no, null).show();
         }
+    }
+
+    protected void withdrawH() {
+        balance -= trans;
+
+        SharedPreferences.Editor peditor = myPrefs.edit();
+        peditor.putFloat("balance", balance);
+        peditor.commit();
+
+        Context context = getApplicationContext();
+        CharSequence text = "Withdrew " + toDollar(trans);
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     /**
