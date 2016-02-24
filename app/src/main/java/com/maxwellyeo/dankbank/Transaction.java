@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TextClock;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
@@ -26,6 +27,7 @@ public class Transaction extends Activity {
     private TextView log_status;
     private SharedPreferences myPrefs;
     private Stack<Float> stack;
+    private int duration = Toast.LENGTH_SHORT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +81,12 @@ public class Transaction extends Activity {
         peditor.putFloat("balance", balance);
         peditor.commit();
 
+        Context context = getApplicationContext();
+        CharSequence text = "Deposited " + toDollar(trans);
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -93,6 +101,12 @@ public class Transaction extends Activity {
             SharedPreferences.Editor peditor = myPrefs.edit();
             peditor.putFloat("balance", balance);
             peditor.commit();
+
+            Context context = getApplicationContext();
+            CharSequence text = "Withdrew " + toDollar(trans);
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
 
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
