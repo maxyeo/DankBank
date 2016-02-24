@@ -1,3 +1,8 @@
+/*
+Maxwell Yeo myeo1
+William Yao wyao7
+ */
+
 package com.maxwellyeo.dankbank;
 
 import android.app.Activity;
